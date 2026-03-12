@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>フレイルケアプロジェクト｜小樽</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  a {
+    color: #0b3c6f;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* ヘッダー */
+  .site-header {
+    background: #0b1f33;
+    color: #fff;
+    padding: 10px 20px;
+  }
+
+  .site-header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .site-nav {
+    font-size: 0.9rem;
+    display: flex;
+    gap: 16px;
+  }
+
+  .site-nav a {
+    color: #dfe9f5;
+  }
+
+  /* ヒーローセクション */
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 340px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(5, 10, 25, 0.55),
+        rgba(5, 10, 25, 0.85)
+      ),
+      url("otaru_night.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 20px 80px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 640px;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
+  }
+
+  .hero-tagline {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
+  }
+
+  /* 概念リンク */
+  .concept-links {
+    max-width: 1100px;
+    margin: 32px auto 0;
+    padding: 0 20px;
+    display: flex;
+    gap: 24px;
+  }
+
+  .concept-links a {
+    flex: 1;
+    text-align: center;
+    padding: 18px 20px;
+    border-radius: 14px;
+    background: #e8f2ff;
+    color: #0b3c6f;
+    font-size: 1.05rem;
+    font-weight: 700;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+
+  .concept-links a:hover {
+    background: #d6e8ff;
+  }
+
+  /* セクション */
+  .section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .section h2 {
+    font-size: 1.45rem;
+    color: #0b3c6f;
+    margin-bottom: 14px;
+    border-left: 5px solid #0b3c6f;
+    padding-left: 10px;
+  }
+
+  .section-lead {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  /* パネル */
+  .panel {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .panel h3 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    color: #0b3c6f;
+    margin-bottom: 10px;
+  }
+
+  .panel-list {
+    margin: 0;
+    padding-left: 1.2em;
+  }
+
+  .panel-list li {
+    margin-bottom: 6px;
+  }
+
+  /* 2カラム */
+  .two-column {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  /* 資料カード */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+  }
+
+  .resource-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    padding: 18px 20px;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resource-card h3 {
+    margin-top: 0;
+    font-size: 1.05rem;
+    color: #0b3c6f;
+    margin-bottom: 8px;
+  }
+
+  .resource-card p {
+    margin: 0 0 12px;
+    color: #555;
+  }
+
+  .resource-card a {
+    align-self: flex-start;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #0b3c6f;
+    color: #fff;
+    font-size: 0.85rem;
+  }
+
+  /* ACPportal */
+  .acp-link-panel {
+    background: #e8f2ff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-size: 1rem;
+    border-left: 5px solid #0b3c6f;
+  }
+
+  .acp-link-panel a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #0b3c6f;
+    color: #fff;
+    font-size: 0.85rem;
+  }
+
+  /* フッター */
+  .site-footer {
+    margin-top: 40px;
+    padding: 20px 20px 28px;
+    background: #0b1f33;
+    color: #d0d8e5;
+    font-size: 0.8rem;
+  }
+
+  .site-footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* スマホ最適化 */
+  @media (max-width: 800px) {
+    .hero-inner {
+      padding: 50px 16px 60px;
+    }
+    .hero-title {
+      font-size: 2rem;
+    }
+    .hero-subtitle {
+      font-size: 0.95rem;
+    }
+    .two-column {
+      grid-template-columns: 1fr;
+    }
+    .concept-links {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    body {
+      font-size: 1.05rem;
+      line-height: 1.95;
+    }
+
+    .site-header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .panel {
+      padding: 20px 16px;
+    }
+
+    .resource-card {
+      padding: 16px 16px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <div class="site-title">フレイルケアプロジェクト</div>
+    <nav class="site-nav">
+      <a href="#about">概要</a>
+      <a href="#structure">構造</a>
+      <a href="#resources">資料</a>
+      <a href="#acpportal">ACPportal</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-title">小樽フレイルケアプロジェクト</div>
+    <div class="hero-subtitle">
+      フレイルケアとACPを中心に、<br>
+      小樽の医療と暮らしを持続可能にするためのプロジェクト
+    </div>
+    <div class="hero-tagline">
+      「暮らし」と「医療」を切り離さず、<br>
+      本人の価値観に沿った医療を実践し、<br>
+      まちの安心と持続性を支えていく取り組みです。
+    </div>
+  </div>
+</section>
+
+<div class="concept-links">
+  <a href="frailty.html">フレイルとは</a>
+  <a href="acp.html">ACPとは</a>
+</div>
+
+<section id="about" class="section">
+  <h2>プロジェクトの概要</h2>
+  <p class="section-lead">
+    小樽フレイルケアプロジェクトは、高齢者のフレイルを早期に捉え、ACP（アドバンス・ケア・プランニング）と結びつけながら、<br>
+    「本人の価値観」と「地域の医療・支援資源」をつなぐための医療従事者向けプロジェクトです。
+  </p>
+
+  <div class="panel">
+    <h3>このプロジェクトが目指していること</h3>
+    <ul class="panel-list">
+      <li>治療だけを追い求めるのではなく、本人の価値観を尊重した医療・ケアの選択を支えること</li>
+      <li>フレイルの予防・早期発見・早期介入を通じて、より健康的なまちの姿を描くこと</li>
+      <li>その結果として、医療も暮らしも持続可能な仕組みに近づけていくこと</li>
+    </ul>
+  </div>
+</section>
+
+<section id="structure" class="section">
+  <h2>フレイルケアとACPの構造</h2>
+  <p class="section-lead">
+    フレイルケアとACPは、本来別々のものではなく、「暮らしを支える医療」の両輪として機能するべきものです。
+  </p>
+
+  <div class="two-column">
+    <div class="panel">
+      <h3>フレイルケアの流れ</h3>
+      <ul class="panel-list">
+        <li>フレイルのリスク評価（身体・認知・社会的側面）</li>
+        <li>生活状況・支援体制の把握と、多職種での共有</li>
+        <li>早期介入（栄養・運動・社会参加・医療的介入）</li>
+        <li>変化のモニタリングと、必要に応じた支援の再調整</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h3>ACPとの接続</h3>
+      <ul class="panel-list">
+        <li>「どこで、誰と、どう過ごしたいか」を早い段階から対話に乗せる</li>
+        <li>医療・介護・生活支援の選択肢を、本人の価値観と照らし合わせて整理する</li>
+        <li>急性増悪や二次崩れの場面でも、事前の対話を踏まえた意思決定ができるようにする</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="resources" class="section">
+  <h2>医療者向け資料</h2>
+  <p class="section-lead">
+    小樽フレイルケアプロジェクトに関連する資料・ツール類です。<br>
+    現場でのカンファレンスや、多職種連携の場面での活用を想定しています。
+  </p>
+
+  <div class="resource-grid">
+    <div class="resource-card">
+      <h3>小樽とACP（スライド）</h3>
+      <p>小樽の医療構造の変化と、ACP文化の必要性を整理したスライド資料です。</p>
+      <a href="小樽とACP.html">開く</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>医療者用 ACPシート</h3>
+      <p>医療的価値観や治療方針を、本人・家族と共有するためのシートです。</p>
+      <a href="医療者用.html">開く</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>意思決定支援（倫理カンファ用）</h3>
+      <p>価値観が揺れる場面で、多職種で最善の方針を検討するための枠組みです。</p>
+      <a href="意思決定支援用.html">開く</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>フレイル評価・介入ツール</h3>
+      <p>フレイルの評価や、介入内容を整理するためのツール群（準備中）。</p>
+      <a href="#">準備中</a>
+    </div>
+  </div>
+</section>
+
+<section id="acpportal" class="section">
+  <h2>一般向け ACPportal との関係</h2>
+  <div class="acp-link-panel">
+    小樽フレイルケアプロジェクトは、医療従事者向けの「上位レイヤー」として、<br>
+    一般の方・ご家族向けの <strong>ACPportal</strong> と連動しています。<br><br>
+    ACPportal では、「自分らしさ」「これからの暮らし」「医療との付き合い方」について、<br>
+    本人や家族が自分のペースで考えられるように構成されています。
+    <br>
+    <a href="https://frailcareteam.github.io/ACPportal/ACPportal.html" target="_blank" rel="noopener">
+      ACPportal を開く
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    小樽フレイルケアプロジェクト / FrailCareProject<br>
+    本ページは医療・福祉・ケアに関わる専門職向けの情報を含みます。
+  </div>
+</footer>
+
+</body>
+</html>
