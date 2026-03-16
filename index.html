@@ -99,6 +99,30 @@
     text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
   }
 
+  /* ★ 修正：ヒーロー直下 ACPportal リンク */
+  .acp-hero-link {
+    max-width: 1100px;
+    margin: 20px auto 30px; /* ← 余白追加 */
+    padding: 0 20px;
+  }
+
+  .acp-hero-link a {
+    display: block;
+    text-align: center;
+    padding: 30px 20px; /* ← 縦幅拡大 */
+    background: #ffe2cc; /* ← 視認性の高い淡いサーモン */
+    color: #7a2f00;      /* ← 読みやすい濃いブラウン */
+    font-size: 1.18rem;
+    font-weight: 700;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    border-left: 6px solid #ff9f5a; /* アクセントライン */
+  }
+
+  .acp-hero-link a:hover {
+    background: #ffd1b0;
+  }
+
   /* 概念リンク */
   .concept-links {
     max-width: 1100px;
@@ -321,6 +345,13 @@
   </div>
 </section>
 
+<!-- ★ 修正：ヒーロー直下 ACPportal リンク -->
+<div class="acp-hero-link">
+  <a href="https://frailcareteam.github.io/AdvanceCarePlanning/" target="_blank" rel="noopener">
+    ACPportal はこちら
+  </a>
+</div>
+
 <div class="concept-links">
   <a href="frailty.html">フレイルとは</a>
   <a href="acp.html">ACPとは</a>
@@ -328,10 +359,14 @@
 
 <section id="about" class="section">
   <h2>プロジェクトの概要</h2>
-  <p class="section-lead">
-    小樽では、急速な高齢化により、<br>
-    医療が後手に回り、救急医療に依存した“事後処理型”の構造が続いてきました。
-  </p>
+<p class="section-lead">
+  小樽では、急速な高齢化により、<br>
+  医療が後手に回り、救急医療に依存した“事後処理型”の構造となっています。
+</p>
+
+<p class="section-lead">
+  これでは、生活の変化を早期に捉えられず、悪化してから対応する流れが続いてしまい、地域の医療・介護の負担が積み重なってしまいます。
+</p>
 
   <div class="panel">
     <h3>このプロジェクトが目指していること</h3>
@@ -343,7 +378,6 @@
     </ul>
   </div>
 </section>
-
 
 <section id="structure" class="section">
   <h2>フレイルケアとACPの構造</h2>
