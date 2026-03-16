@@ -6,6 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    /* ★ ヘッダー左側 ACPportal リンク */
+.header-acp-link {
+  margin-left: 26px; /* ← スペースを広げた */
+  font-size: 0.9rem;
+}
+
+.header-acp-link a {
+  color: #dfe9f5; /* index.html のナビと同じ色 */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header-acp-link a:hover {
+  text-decoration: underline;
+}
+
   body {
     font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
     background-color: #f4f7f9;
@@ -143,17 +159,56 @@
       line-height: 2.05;
     }
   }
+
+  /* ★ ACPportal リンク（医療者向けページ用） */
+.acp-portal-box {
+  background: #ffe2cc;
+  border-left: 6px solid #ff9f5a;
+  padding: 20px 22px;
+  margin: 40px 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.acp-portal-box p {
+  margin: 0 0 12px;
+  color: #5a2a00;
+  line-height: 1.8;
+}
+
+.acp-portal-box a {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #0b3c6f;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.acp-portal-box a:hover {
+  background: #092f56;
+}
+
   </style>
 </head>
 
 <body>
 
   <!-- ヘッダー -->
-  <header class="site-header">
-    <div class="site-header-inner">
-      <div class="site-title">フレイルケアプロジェクト</div>
+<header class="site-header">
+  <div class="site-header-inner">
+    <div class="site-title">
+      フレイルケアプロジェクト
+      <span class="header-acp-link">
+        <a href="https://frailcareteam.github.io/AdvanceCarePlanning/" target="_blank" rel="noopener">
+          → ACPportalはこちら
+        </a>
+      </span>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- メイン -->
   <section class="section">
@@ -271,6 +326,18 @@
 
       </div>
     </section>
+
+<!-- ★ ACPportal へのリンク（医療者向けページ用） -->
+<div class="acp-portal-box">
+  <p>
+     <strong>ACPportal</strong> では、<br>
+    「自分らしさ」「これからの暮らし」「医療との付き合い方」について、  
+    本人や家族が自分のペースで考えられるように構成されています。
+  </p>
+  <a href="https://frailcareteam.github.io/AdvanceCarePlanning/" target="_blank" rel="noopener">
+    ACPportal はこちら
+  </a>
+</div>
 
     <p style="text-align:center; margin-top:40px;">
       <a href="index.html">← トップに戻る</a>
