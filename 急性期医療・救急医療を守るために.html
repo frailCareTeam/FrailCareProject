@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>急性期医療・救急医療を守るために｜フレイルケアプロジェクト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="小樽の急性期・救急医療を守るため、生活を支える地域構造とACPの重要性を整理した提言です。">
+
+  <meta property="og:title" content="急性期医療・救急医療を守るために｜フレイルケアプロジェクト">
+  <meta property="og:description" content="生活を守る医療（Primary care）とAccountabilityの重要性を解説します。">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root{
+      --brand-dark: #0b1f33;
+      --brand-mid: #0b3c6f;
+      --bg: #f4f7f9;
+      --panel-bg: #ffffff;
+      --text: #333333;
+      --muted: #6b7280;
+    }
+
+    /* 基本レイアウト */
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: var(--brand-mid);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* スキップリンク（アクセシビリティ） */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
+      width: auto;
+      height: auto;
+      background: var(--brand-dark);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      z-index: 1000;
+    }
+
+    /* ヘッダー */
+    .site-header {
+      background: var(--brand-dark);
+      color: #fff;
+      padding: 12px 20px;
+    }
+
+    .site-header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    /* メインコンテンツ */
+    main.section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    main.section h1 {
+      font-size: 1.8rem;
+      color: var(--brand-mid);
+      margin-bottom: 24px;
+    }
+
+    main.section h2 {
+      font-size: 1.35rem;
+      color: var(--brand-mid);
+      margin-top: 48px;
+      margin-bottom: 18px;
+      border-left: 5px solid var(--brand-mid);
+      padding-left: 12px;
+    }
+
+    .panel {
+      background: var(--panel-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 28px 26px;
+      margin-top: 20px;
+      font-size: 1.05rem;
+    }
+
+    .panel p {
+      margin-top: 0;
+      margin-bottom: 1.4em;
+    }
+
+    .panel h3 {
+      font-size: 1.15rem;
+      color: var(--brand-mid);
+      margin-top: 36px;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.6rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+      color: var(--brand-mid);
+      font-weight: 600;
+      list-style: disc;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .site-footer {
+      margin-top: 48px;
+      padding: 18px 20px 26px;
+      background: var(--brand-dark);
+      color: #d0d8e5;
+      font-size: 0.8rem;
+    }
+
+    .site-footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      body {
+        font-size: 1.12rem;
+        line-height: 2.05;
+      }
+
+      main.section {
+        padding: 32px 16px;
+      }
+
+      main.section h1 {
+        font-size: 1.55rem;
+      }
+
+      .panel {
+        padding: 22px 18px;
+        font-size: 1.12rem;
+      }
+
+      .panel h3 {
+        font-size: 1.1rem;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+    }
+
+    /* 印刷時の簡易調整 */
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      .site-header, .site-footer {
+        display: none;
+      }
+      .panel {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">本文へスキップ</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <div class="site-title">フレイルケアプロジェクト</div>
+    </div>
+  </header>
+
+  <main id="main-content" class="section" role="main" aria-labelledby="page-title">
+    <h1 id="page-title">急性期医療・救急医療を守るために</h1>
+
+    <section class="panel" aria-labelledby="intro-title">
+      <h2 id="intro-title" class="note" style="border-left: none; padding-left: 0; margin-top: 0;">趣旨</h2>
+      <p>
+        本稿は、急性期・救急医療が本来の役割を果たし続けるために、その手前で生活を支える構造を地域に取り戻すことを目的とした提言です。
+      </p>
+      <p class="note">
+        ※医療を制限するための議論ではなく、医療を守るための整理として位置づけています。
+      </p>
+    </section>
+
+    <h2>高齢化とともに集中する負荷</h2>
+    <section class="panel" aria-labelledby="aging-title">
+      <p>
+        高齢化の進行に伴い、急性期・救急医療の現場には、生活の自律性が低下した人や、治療による回復が見込みにくい状態の人が多く関わるようになっています。
+      </p>
+      <p>
+        これは医療現場の努力や姿勢の問題ではなく、生活を支える仕組みが地域に十分整備されてこなかった結果です。
+      </p>
+    </section>
+
+    <h2>現場で働く医師・スタッフへの影響</h2>
+    <section class="panel" aria-labelledby="staff-title">
+      <p>
+        急性期医療の目的が成立しにくい診療が増えることで、決められない医療や、終わりを引き受け続ける医療が日常化し、医師・看護師・スタッフの負担は増大しています。
+      </p>
+      <p>
+        特に若手医師にとっては、治して元の生活に戻す経験を積みにくい構造となり、精神的消耗が蓄積しやすい状況が生まれています。
+      </p>
+    </section>
+
+    <h2>医療者は地域の財産</h2>
+    <section class="panel" aria-labelledby="asset-title">
+      <p>
+        地域の基幹病院や救急医療を担う医療機関で働く医師・スタッフは、小樽にとってかけがえのない財産です。
+      </p>
+      <p>
+        医療者が疲弊し、去っていく構造を放置することは、地域そのものの衰退につながります。
+      </p>
+    </section>
+
+    <h2>生活の自律性が低下する前に</h2>
+    <section class="panel" aria-labelledby="before-loss-title">
+      <p>
+        生活の自律性が低下し、一人で生活を続けることが難しくなる前に、ACP（アドバンス・ケア・プランニング）を含めた十分な話し合いを行うことが重要です。
+      </p>
+      <p>
+        そのような状態の人に対する急性期医療は、場合によっては生活の場を奪う医療となり得ます だからこそ、急性期医療の手前で、生活の場を守る医療を遂行する構造が必要です。
+      </p>
+    </section>
+
+    <h2>Primary care が担う役割</h2>
+    <section class="panel" aria-labelledby="primarycare-title">
+      <p>
+        Primary care（かかりつけ医・プライマリケア）は、病気を診るだけでなく、その人の生活を起点に医療を考え、支え続ける役割を担っています。
+      </p>
+
+      <ul>
+        <li><strong>Accessibility：</strong>困ったときにまず相談できる身近な窓口であること</li>
+        <li><strong>Comprehensiveness：</strong>病気だけでなく生活背景や家族・社会的状況を踏まえて受け止めること</li>
+        <li><strong>Coordination：</strong>医療・介護・福祉・地域資源を調整してその人の生活をつなぐこと（Coordination／コーディネーション）</li>
+        <li><strong>Continuity：</strong>変化に応じて関わり方を更新し、生活を支え続けること</li>
+        <li><strong>Accountability：</strong>上記について、これまでの経過と今後の見通しを責任をもって説明できること（説明責任）</li>
+      </ul>
+
+      <p>
+        医療は、その過程で必要なときに確実につながれる手段の一つであり、目的ではありません。
+      </p>
+      <p>
+        この Accountability（説明責任）が地域の中で十分に担保されていないとき、その役割は、結果として救急医療の現場に委ねられることになります。
+        そして、まさにその状況が、現在の小樽の急性期・救急医療の現場に生まれています。
+      </p>
+    </section>
+
+    <h2>急性期医療・救急医療の正常化</h2>
+    <section class="panel" aria-labelledby="normalization-title">
+      <p>
+        急性期医療・救急医療を守るために必要なのは、縮小や制限ではなく、本来の役割に戻すことです。
+      </p>
+      <p>
+        そのためには、生活の中で引き受けられるべき判断や調整、そして説明責任（Accountability）を地域の中で担保し直す必要があります。
+      </p>
+
+      <p>
+        信頼関係のあるかかりつけ医が日々の診療でAccountability（説明責任）を果たすことが、ACP を現場に定着させ、急性期・救急医療が本来の役割を維持するための基盤になります。
+        現状では説明責任が曖昧にされ、救急医療に丸投げされているためACPが救急に流れ込みやすくなっています。
+        日常診療が説明責任に基づくものであれば、ACPは救急に至る前に講じられ、生活を守るための調整や施設への適切な Coordination（コーディネーション）が可能になります。
+        まずは医療者と地域が説明責任を明確にし、早期の意思決定支援とコーディネーションを制度化・実践していきましょう。
+      </p>
+
+    </section>
+
+    <p style="text-align:center; margin-top:40px;">
+      <a href="https://frailcareteam.github.io/FrailCareProject/" rel="noopener">← トップに戻る</a>
+    </p>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer-inner">
+      小樽フレイルケアプロジェクト / FrailCareProject
+    </div>
+  </footer>
+
+</body>
+</html>
