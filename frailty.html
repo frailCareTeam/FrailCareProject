@@ -6,114 +6,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+:root {
+  --axis-color: #16a34a;
+  --axis-color-dark: #166534;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-               "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont,
+               "Helvetica Neue", "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.9;
   background: #fafafa;
   color: #222;
+  line-height: 1.9;
   -webkit-text-size-adjust: 100%;
 }
 
-/* Older（O）軸カラー */
-:root {
-  --axis-color: #a855f7;
-  --axis-color-dark: #7e22ce;
-}
-
-header {
+.site-header {
   background: var(--axis-color);
   color: white;
-  padding: 1.2rem;
   text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
+  padding: 1.2rem;
 }
 
-.container {
+.site-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.section {
   max-width: 900px;
   margin: 0 auto;
   padding: 1.5rem;
 }
 
-h2 {
-  font-size: 1.3rem;
-  margin-top: 2rem;
-  border-left: 6px solid var(--axis-color);
-  padding-left: 0.6rem;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 1.15rem;
-  margin-top: 1.5rem;
+h1 {
+  font-size: 1.8rem;
+  margin-top: 0;
   color: var(--axis-color-dark);
 }
 
-.section-block {
-  background: #fff;
-  padding: 1.3rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  margin-top: 1.4rem;
+h2 {
+  font-size: 1.35rem;
+  margin-top: 2.2rem;
+  border-left: 6px solid var(--axis-color);
+  padding-left: 0.7rem;
 }
 
-ul {
-  padding-left: 1.4rem;
-  margin-top: 0.8rem;
+h3 {
+  margin-top: 1.8rem;
+  color: var(--axis-color-dark);
 }
 
-li {
-  margin-bottom: 0.9rem;
+.panel {
+  background: white;
+  padding: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
-li strong {
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong {
   color: var(--axis-color-dark);
 }
 
 a {
   color: var(--axis-color-dark);
-  font-weight: 600;
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-footer {
+.site-footer {
   text-align: center;
-  padding: 2rem 1rem;
+  color: #666;
   font-size: 0.9rem;
-  color: #777;
+  padding: 2rem 1rem;
 }
 
-/* ダークモードでも白背景維持 */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #fafafa;
-    color: #222;
-  }
-
-  header {
-    background: var(--axis-color);
-    color: #fff;
-  }
-
-  .section-block {
-    background: #fff;
-    box-shadow: none;
-  }
-
-  h2,
-  h3 {
-    color: var(--axis-color-dark);
-  }
+.return-home {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 1.05rem;
 }
 
-/* スマホ最適化 */
+.return-home a {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  background: #eef9f0;
+}
+
 @media (max-width: 600px) {
 
   body {
@@ -121,37 +118,50 @@ footer {
     line-height: 2.0;
   }
 
-  header {
-    font-size: 1.15rem;
+  .site-header {
     padding: 1rem;
   }
 
-  .container {
+  .site-title {
+    font-size: 1.15rem;
+  }
+
+  .section {
     padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.45rem;
   }
 
   h2 {
     font-size: 1.15rem;
-    margin-top: 1.6rem;
   }
 
   h3 {
     font-size: 1.05rem;
   }
 
-  .section-block {
+  .panel {
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 10px;
   }
 
-  ul {
-    padding-left: 1.2rem;
-  }
-
-  li {
-    margin-bottom: 1rem;
-  }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background: #fafafa;
+    color: #222;
+  }
+
+  .panel {
+    background: white;
+  }
+
+}
+
 </style>
 
 </head>
@@ -524,11 +534,11 @@ Frailtyの段階で変化に気づき、
 小樽の生活と医療を守ることを目指しています。
 </p>
 </div>
-<p style="text-align:center; margin-top:40px;">
-  <a href="https://frailcareteam.github.io/FrailCareProject/">
-    ← トップに戻る
+<div class="return-home">
+  index.html
+    ← フレイルケアプロジェクトへ戻る
   </a>
-</p>
+</div>
   </section>
   <!-- フッター -->
   <footer class="site-footer">
