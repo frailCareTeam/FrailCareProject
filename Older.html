@@ -6,104 +6,138 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+               "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  background: #fafafa;
+  color: #222;
+}
+
+/* Older（O）軸カラー */
+:root {
+  --axis-color: #a855f7;
+  --axis-color-dark: #7e22ce;
+}
+
+header {
+  background: var(--axis-color);
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.4rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  border-left: 6px solid var(--axis-color);
+  padding-left: 0.6rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.6rem;
+  color: var(--axis-color-dark);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+li strong {
+  color: var(--axis-color-dark);
+}
+
+.section-block {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  margin-top: 1.4rem;
+}
+
+a {
+  color: var(--axis-color-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+@media (prefers-color-scheme: dark) {
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.7;
     background: #fafafa;
     color: #222;
   }
 
-  /* Older（O）軸カラー：index と同期（紫） */
-  :root {
-    --axis-color: #a855f7;      /* 明るい紫 */
-    --axis-color-dark: #7e22ce; /* 濃い紫 */
-  }
-
   header {
     background: var(--axis-color);
-    color: white;
-    padding: 1.2rem;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
-
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1.4rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-    margin-top: 2rem;
-    border-left: 6px solid var(--axis-color);
-    padding-left: 0.6rem;
-    font-weight: 600;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-    margin-top: 1.6rem;
-    color: var(--axis-color-dark);
-  }
-
-  ul {
-    padding-left: 1.2rem;
-    margin-top: 0.6rem;
-  }
-
-  li {
-    margin-bottom: 0.6rem;
-    color: var(--axis-color-dark);
-    font-weight: 600;
+    color: #fff;
   }
 
   .section-block {
     background: #fff;
-    padding: 1.2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    margin-top: 1.4rem;
+    box-shadow: none;
   }
 
-  footer {
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 0.85rem;
-    color: #777;
+  h2,
+  h3 {
+    color: var(--axis-color-dark);
   }
+}
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
 
-  /* ダークモードでも白背景を維持（全ページ統一仕様） */
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: #fafafa;
-      color: #222;
-    }
-    header {
-      background: var(--axis-color);
-      color: #fff;
-    }
-    .section-block {
-      background: #fff;
-      box-shadow: none;
-    }
-    h2, h3, li {
-      color: var(--axis-color-dark);
-    }
-  }
+footer a {
+  color: var(--axis-color-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
 </style>
+
 </head>
 
 <body>
 
-<header>Older｜resident-tools</header>
+<header>
+  Older｜resident-tools
+</header>
 
 <div class="container">
 
   <h2>Older：高齢者医療</h2>
+
   <div class="section-block">
     <p>
       生活を守り続けるための医療。<br>
@@ -112,23 +146,28 @@
   </div>
 
   <h2>本来の Primary care とは</h2>
+
   <div class="section-block">
+
     <p>
       Primary care は「common disease を診る外来」ではありません。<br>
       その特徴は ACCCA で整理されます。
     </p>
 
     <ul>
-      <li><strong>Accessibility：</strong>相談しやすく、</li>
-      <li><strong>Comprehensiveness：</strong>まず対応してくれ、</li>
-      <li><strong>Coordination：</strong>必要な医療・介護につなぎ、</li>
-      <li><strong>Continuity：</strong>生活を継続し続けられるように、</li>
-      <li><strong>Accountability：</strong>責任をもって説明してくれる人</li>
+      <li><strong>Accessibility：</strong>相談しやすい</li>
+      <li><strong>Comprehensiveness：</strong>まず対応してくれる</li>
+      <li><strong>Coordination：</strong>必要な医療・介護につなぐ</li>
+      <li><strong>Continuity：</strong>生活を継続できるよう支える</li>
+      <li><strong>Accountability：</strong>責任をもって説明してくれる</li>
     </ul>
+
   </div>
 
   <h2>かかりつけ医</h2>
+
   <div class="section-block">
+
     <p>
       ACCCA は、かかりつけ医が果たすべき役割そのものです。<br>
       疾患ではなく「人」として向き合い、専門外だからと紹介して終わりにせず、<br>
@@ -143,25 +182,23 @@
 
 <p>
   「生活機能の変化」を理解するためには、フレイルを理解する必要があります。<br>
-  → <a href="https://frailcareteam.github.io/FrailCareProject/frailty.html"
-        target="_blank" rel="noopener">
-        フレイルについて
-      </a>
+  →
+  <a href="frailty.html"
+     target="_blank"
+     rel="noopener">
+     フレイルについて
+  </a>
 </p>
 
   </div>
 
 </div>
 
-<div id="footer"></div>
-
-<script>
-  fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
-</script>
+<footer>
+  <p>
+    <a href="index.html">← フレイルケアプロジェクトへ</a>
+  </p>
+</footer>
 
 </body>
 </html>
