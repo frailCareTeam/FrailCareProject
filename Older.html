@@ -11,9 +11,10 @@ body {
                "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.7;
+  line-height: 1.9;
   background: #fafafa;
   color: #222;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Older（O）軸カラー */
@@ -34,7 +35,7 @@ header {
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 1.4rem;
+  padding: 1.5rem;
 }
 
 h2 {
@@ -46,29 +47,30 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
-  margin-top: 1.6rem;
-  color: var(--axis-color-dark);
-}
-
-ul {
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.6rem;
-}
-
-li strong {
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
   color: var(--axis-color-dark);
 }
 
 .section-block {
   background: #fff;
-  padding: 1.2rem;
+  padding: 1.3rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
   margin-top: 1.4rem;
+}
+
+ul {
+  padding-left: 1.4rem;
+  margin-top: 0.8rem;
+}
+
+li {
+  margin-bottom: 0.9rem;
+}
+
+li strong {
+  color: var(--axis-color-dark);
 }
 
 a {
@@ -83,11 +85,12 @@ a:hover {
 
 footer {
   text-align: center;
-  padding: 2rem 0;
-  font-size: 0.85rem;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
   color: #777;
 }
 
+/* ダークモードでも白背景維持 */
 @media (prefers-color-scheme: dark) {
   body {
     background: #fafafa;
@@ -109,20 +112,45 @@ footer {
     color: var(--axis-color-dark);
   }
 }
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.9rem;
-}
 
-footer a {
-  color: var(--axis-color-dark);
-  font-weight: 600;
-  text-decoration: none;
-}
+/* スマホ最適化 */
+@media (max-width: 600px) {
 
-footer a:hover {
-  text-decoration: underline;
+  body {
+    font-size: 1.08rem;
+    line-height: 2.0;
+  }
+
+  header {
+    font-size: 1.15rem;
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+  }
+
+  .section-block {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
 }
 </style>
 
