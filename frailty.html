@@ -27,6 +27,8 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+/* ヘッダー */
+
 .site-header {
   background: var(--axis-color);
   color: white;
@@ -38,6 +40,8 @@ body {
   font-size: 1.35rem;
   font-weight: 700;
 }
+
+/* メイン */
 
 .section {
   max-width: 900px;
@@ -63,6 +67,8 @@ h3 {
   color: var(--axis-color-dark);
 }
 
+/* パネル */
+
 .panel {
   background: white;
   padding: 1.4rem;
@@ -72,6 +78,8 @@ h3 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
+/* 本文 */
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -80,6 +88,20 @@ p {
 strong {
   color: var(--axis-color-dark);
 }
+
+/* 箇条書き */
+
+ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+/* リンク */
 
 a {
   color: var(--axis-color-dark);
@@ -91,12 +113,20 @@ a:hover {
   text-decoration: underline;
 }
 
-.site-footer {
+/* フレイル推移図 */
+
+.frailty-flow {
+  background: #eef9f0;
+  border-left: 6px solid var(--axis-color);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
   text-align: center;
-  color: #666;
-  font-size: 0.9rem;
-  padding: 2rem 1rem;
+  line-height: 2;
+  font-weight: 700;
 }
+
+/* 戻るボタン */
 
 .return-home {
   text-align: center;
@@ -111,11 +141,22 @@ a:hover {
   background: #eef9f0;
 }
 
+/* フッター */
+
+.site-footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  padding: 2rem 1rem;
+}
+
+/* スマホ最適化 */
+
 @media (max-width: 600px) {
 
   body {
     font-size: 1.08rem;
-    line-height: 2.0;
+    line-height: 2;
   }
 
   .site-header {
@@ -147,7 +188,13 @@ a:hover {
     border-radius: 10px;
   }
 
+  .frailty-flow {
+    font-size: 1rem;
+  }
+
 }
+
+/* ダークモードでも白背景維持 */
 
 @media (prefers-color-scheme: dark) {
 
@@ -191,22 +238,27 @@ a:hover {
 その脆弱性によって何が起こるのかです。
 </p>
 <p>
-加齢によって、
-栄養状態が悪化する。
-代謝が低下する。
-認知機能が低下する。
-コミュニケーション能力が低下する。
-筋力や骨密度が低下する。
-免疫力が低下する。
-余力や体力が低下する。
+加齢によって次のような変化が生じます。
 </p>
+<ul>
+  <li>栄養状態の悪化</li>
+  <li>代謝の低下</li>
+  <li>認知機能の低下</li>
+  <li>コミュニケーション能力の低下</li>
+  <li>筋力・骨密度の低下</li>
+  <li>免疫力の低下</li>
+  <li>余力・体力の低下</li>
+</ul>
 <p>
 こうした変化が積み重なることで、
-病気にかかりやすくなる。
-病気が治りにくくなる。
-けがをしやすくなる。
-けがが治りにくくなる。
+次のような状態が生じます。
 </p>
+<ul>
+  <li>病気にかかりやすくなる</li>
+  <li>病気が治りにくくなる</li>
+  <li>けがをしやすくなる</li>
+  <li>けがが治りにくくなる</li>
+</ul>
 <p>
 そして最も重要なのは、
 <strong>治療と生活が一致しなくなること</strong>
@@ -255,10 +307,18 @@ Autonomyとは、
 です。
 </p>
 <p>
-生活の自律性は、<br>
-Robust（ロバスト：安定）≧ Frailty（フレイル：不安定・脆弱）＞生活破綻（自律性崩壊）➡ Disability（ディスアビリティ：自律障害）
-という4段階で表すことができます。
+生活の自律性は次の4段階で考えることができます。
 </p>
+
+<div class="frailty-flow">
+🟢 Robust（安定）<br>
+↓<br>
+🟡 Frailty（不安定・脆弱）<br>
+↓<br>
+🟠 生活破綻（自律性の崩壊）<br>
+↓<br>
+🔴 Disability（自律生活不能）
+</div>
 <h3>Robust</h3>
 <p>
 Robust（ロバスト）は、
@@ -326,12 +386,18 @@ Agencyが失われることで、
 生活そのものを営むことができなくなります。
 </p>
 <p>
-その結果として、
-・通院中断<br>
-・服薬中断<br>
-・低栄養<br>
-・社会的孤立<br>
-などが生じ、それまで当たり前だった生活は突然終わりを迎えます。
+その結果として次のような問題が生じます。
+</p>
+
+<ul>
+  <li>通院中断</li>
+  <li>服薬中断</li>
+  <li>低栄養</li>
+  <li>社会的孤立</li>
+</ul>
+
+<p>
+それまで当たり前だった生活は突然終わりを迎えます。
 </p>
 <p>
 生活破綻に至った結果、
@@ -379,13 +445,14 @@ Agencyの喪失によって、
 Agency（主体性）とAutonomy（自律性）によって支えられています。
 </p>
 <p>
-しかし、
-役割の喪失、
-退職、
-社会的孤立、
-目標の喪失などによって、
-Agencyも徐々に低下していきます。
+Agencyは次のような出来事によって徐々に低下していきます。
 </p>
+<ul>
+  <li>役割の喪失</li>
+  <li>退職</li>
+  <li>社会的孤立</li>
+  <li>目標の喪失</li>
+</ul>
 <p>
 さらに、
 加齢とともに、
@@ -435,13 +502,16 @@ Agency（主体性）です。
 役割や責任はAgencyの源です。
 </p>
 <p>
-退職、
-子どもの独立、
-配偶者との死別、
-地域との関わりの減少などによって、
-役割や責任を失うと、
+次のような出来事によって役割や責任を失うと、
 生活の目的や目標も失われやすくなります。
 </p>
+
+<ul>
+  <li>退職</li>
+  <li>子どもの独立</li>
+  <li>配偶者との死別</li>
+  <li>地域との関わりの減少</li>
+</ul>
 <p>
 生活の目的や目標を失うと、
 やりがいや生きがいも失われます。
