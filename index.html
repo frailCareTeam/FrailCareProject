@@ -5,349 +5,398 @@
   <title>フレイルケアプロジェクト</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-  body {
-    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-    background-color: #f4f7f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    font-size: 1rem;
-    line-height: 1.85;
-  }
-
-  a {
-    color: #0b3c6f;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* ヘッダー */
-  .site-header {
-    background: #0b1f33;
-    color: #fff;
-    padding: 10px 20px;
-  }
-
-  .site-header-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .site-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
-
-  .site-nav {
-    font-size: 0.9rem;
-    display: flex;
-    gap: 16px;
-  }
-
-  .site-nav a {
-    color: #dfe9f5;
-  }
-
-  /* ヒーローセクション */
-  .hero {
-    position: relative;
-    width: 100%;
-    min-height: 340px;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(5, 10, 25, 0.55),
-        rgba(5, 10, 25, 0.85)
-      ),
-      url("otaru_night.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-  }
-
-  .hero-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 70px 20px 80px;
-  }
-
-  .hero-title {
-    font-size: 2.4rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
-  }
-
-  .hero-subtitle {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    max-width: 640px;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
-  }
-
-  .hero-tagline {
-    margin-top: 18px;
-    font-size: 0.9rem;
-    opacity: 0.9;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
-  }
-
-  /* ★ 修正：ヒーロー直下 ACPportal リンク */
-  .acp-hero-link {
-    max-width: 1100px;
-    margin: 20px auto 30px; /* ← 余白追加 */
-    padding: 0 20px;
-  }
-
-  .acp-hero-link a {
-    display: block;
-    text-align: center;
-    padding: 30px 20px; /* ← 縦幅拡大 */
-    background: #ffe2cc; /* ← 視認性の高い淡いサーモン */
-    color: #7a2f00;      /* ← 読みやすい濃いブラウン */
-    font-size: 1.18rem;
-    font-weight: 700;
-    border-radius: 14px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-    border-left: 6px solid #ff9f5a; /* アクセントライン */
-  }
-
-  .acp-hero-link a:hover {
-    background: #ffd1b0;
-  }
-
-  /* 概念リンク */
-  .concept-links {
-    max-width: 1100px;
-    margin: 32px auto 0;
-    padding: 0 20px;
-    display: flex;
-    gap: 24px;
-  }
-
-  .concept-links a {
-    flex: 1;
-    text-align: center;
-    padding: 18px 20px;
-    border-radius: 14px;
-    background: #e8f2ff;
-    color: #0b3c6f;
-    font-size: 1.05rem;
-    font-weight: 700;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  }
-
-  .concept-links a:hover {
-    background: #d6e8ff;
-  }
-
-  /* セクション */
-  .section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-
-  .section h2 {
-    font-size: 1.45rem;
-    color: #0b3c6f;
-    margin-bottom: 14px;
-    border-left: 5px solid #0b3c6f;
-    padding-left: 10px;
-  }
-
-  .section-lead {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
-  }
-
-  /* パネル */
-  .panel {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    padding: 22px 24px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-  }
-
-  .panel h3 {
-    margin-top: 0;
-    font-size: 1.15rem;
-    color: #0b3c6f;
-    margin-bottom: 10px;
-  }
-
-  .panel-list {
-    margin: 0;
-    padding-left: 1.2em;
-  }
-
-  .panel-list li {
-    margin-bottom: 6px;
-  }
-
-  /* 2カラム */
-  .two-column {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    gap: 20px;
-  }
-.new-badge{
-  display:inline-block;
-  margin-left:8px;
-  padding:2px 8px;
-  border-radius:20px;
-  background:#dc2626;
-  color:#fff;
-  font-size:0.7rem;
-  font-weight:700;
-  vertical-align:middle;
+<style>
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background-color: #f4f7f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.85;
 }
-  /* 資料カード */
-  .resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-  }
 
-  .resource-card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    padding: 18px 20px;
-    font-size: 0.95rem;
-    display: flex;
-    flex-direction: column;
-  }
+a {
+  color: #0b3c6f;
+  text-decoration: none;
+}
 
-  .resource-card h3 {
-    margin-top: 0;
-    font-size: 1.05rem;
-    color: #0b3c6f;
-    margin-bottom: 8px;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  .resource-card p {
-    margin: 0 0 12px;
-    color: #555;
-  }
+/* ヘッダー */
+.site-header {
+  background: #0b1f33;
+  color: #fff;
+  padding: 10px 20px;
+}
 
-  .resource-card a {
-    align-self: flex-start;
-    padding: 6px 12px;
-    border-radius: 6px;
-    background: #0b3c6f;
-    color: #fff;
-    font-size: 0.85rem;
+.site-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.site-nav {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 16px;
+}
+
+.site-nav a {
+  color: #dfe9f5;
+}
+
+/* ヒーロー */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 340px;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(5, 10, 25, 0.55),
+      rgba(5, 10, 25, 0.85)
+    ),
+    url("otaru_night.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 20px 80px;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 6px rgba(255,255,255,0.85);
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 640px;
+  text-shadow: 0 0 6px rgba(255,255,255,0.85);
+}
+
+.hero-tagline {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-shadow: 0 0 6px rgba(255,255,255,0.85);
+}
+
 .hero-notice{
   margin-top:24px;
+  padding:14px 18px;
+  background:rgba(255,255,255,0.15);
+  border-radius:10px;
+  font-size:0.85rem;
+  line-height:1.8;
+}
+
+/* 更新履歴 */
+.hero-update{
+  margin-top:12px;
   padding:14px 18px;
   background:#fff3cd;
   border-left:6px solid #f59e0b;
   border-radius:10px;
-  font-size:0.9rem;
-  line-height:1.8;
   color:#5b3b00;
-}
-
-  /* ACPportal */
-  .acp-link-panel {
-    background: #e8f2ff;
-    border-radius: 10px;
-    padding: 18px 20px;
-    font-size: 1rem;
-    border-left: 5px solid #0b3c6f;
-  }
-
-  .acp-link-panel a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    background: #0b3c6f;
-    color: #fff;
-    font-size: 0.85rem;
-  }
-
-  /* フッター */
-  .site-footer {
-    margin-top: 40px;
-    padding: 20px 20px 28px;
-    background: #0b1f33;
-    color: #d0d8e5;
-    font-size: 0.8rem;
-  }
-
-  .site-footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  /* スマホ最適化 */
-  @media (max-width: 800px) {
-    .hero-inner {
-      padding: 50px 16px 60px;
-    }
-    .hero-title {
-      font-size: 2rem;
-    }
-    .hero-subtitle {
-      font-size: 0.95rem;
-    }
-    .two-column {
-      grid-template-columns: 1fr;
-    }
-    .concept-links {
-      flex-direction: column;
-      gap: 16px;
-    }
-    
-  }
-
-  @media (max-width: 600px) {
-    body {
-      font-size: 1.05rem;
-      line-height: 1.95;
-    }
-
-    .site-header-inner {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 6px;
-    }
-
-    .panel {
-      padding: 20px 16px;
-    }
-
-    .resource-card {
-      padding: 16px 16px;
-    }
-    .hero-title{
-  font-size:1.7rem;
-  line-height:1.4;
-}
-
-.hero-tagline{
   font-size:0.95rem;
+  line-height:1.8;
 }
 
-.acp-hero-link a{
-  padding:22px 16px;
-  font-size:1.05rem;
+.hero-update strong{
+  color:#7c2d12;
 }
 
+.update-history{
+  max-height:160px;
+  overflow-y:auto;
+  margin-top:10px;
+  padding-right:8px;
+}
+
+.update-item{
+  margin-bottom:10px;
+  padding-bottom:8px;
+  border-bottom:1px solid rgba(0,0,0,0.15);
+}
+
+.update-item:last-child{
+  border-bottom:none;
+}
+
+/* スクロールバー */
+.update-history::-webkit-scrollbar{
+  width:6px;
+}
+
+.update-history::-webkit-scrollbar-track{
+  background:#f6df92;
+  border-radius:10px;
+}
+
+.update-history::-webkit-scrollbar-thumb{
+  background:#d97706;
+  border-radius:10px;
+}
+
+/* ACPportal */
+.acp-hero-link {
+  max-width: 1100px;
+  margin: 20px auto 30px;
+  padding: 0 20px;
+}
+
+.acp-hero-link a {
+  display: block;
+  text-align: center;
+  padding: 30px 20px;
+  background: #ffe2cc;
+  color: #7a2f00;
+  font-size: 1.18rem;
+  font-weight: 700;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  border-left: 6px solid #ff9f5a;
+}
+
+.acp-hero-link a:hover {
+  background: #ffd1b0;
+}
+
+/* 概念リンク */
+.concept-links {
+  max-width: 1100px;
+  margin: 32px auto 0;
+  padding: 0 20px;
+  display: flex;
+  gap: 24px;
+}
+
+.concept-links a {
+  flex: 1;
+  text-align: center;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: #e8f2ff;
+  color: #0b3c6f;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.concept-links a:hover {
+  background: #d6e8ff;
+}
+
+/* セクション */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section h2 {
+  font-size: 1.45rem;
+  color: #0b3c6f;
+  margin-bottom: 14px;
+  border-left: 5px solid #0b3c6f;
+  padding-left: 10px;
+}
+
+.section-lead {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* パネル */
+.panel {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.panel h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #0b3c6f;
+  margin-bottom: 10px;
+}
+
+.panel-list {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.panel-list li {
+  margin-bottom: 6px;
+}
+
+/* NEW */
+.new-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.resource-card-new {
+  border: 2px solid #dc2626;
+}
+
+/* 資料カード */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.resource-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  padding: 18px 20px;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+  color: #0b3c6f;
+  margin-bottom: 8px;
+}
+
+.resource-card p {
+  margin: 0 0 12px;
+  color: #555;
+}
+
+.resource-card a {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #0b3c6f;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+/* ACP */
+.acp-link-panel {
+  background: #e8f2ff;
+  border-radius: 10px;
+  padding: 18px 20px;
+  font-size: 1rem;
+  border-left: 5px solid #0b3c6f;
+}
+
+.acp-link-panel a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #0b3c6f;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+/* フッター */
+.site-footer {
+  margin-top: 40px;
+  padding: 20px 20px 28px;
+  background: #0b1f33;
+  color: #d0d8e5;
+  font-size: 0.8rem;
+}
+
+.site-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* タブレット */
+@media (max-width: 800px) {
+  .hero-inner {
+    padding: 50px 16px 60px;
   }
-  </style>
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .concept-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+  body {
+    font-size: 1.05rem;
+    line-height: 1.95;
+  }
+
+  .site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .panel {
+    padding: 20px 16px;
+  }
+
+  .resource-card {
+    padding: 16px;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+
+  .hero-tagline {
+    font-size: 0.95rem;
+  }
+
+  .acp-hero-link a {
+    padding: 22px 16px;
+    font-size: 1.05rem;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -364,7 +413,7 @@
       <a href="#resources">資料</a>
       <a href="#acpportal">ACPportal</a>
     </nav>
-        <!-- ★ ヘッダー右側に更新日 -->
+
     <div style="font-size:0.8rem; color:#dfe9f5;">
   最終更新：2026.10.16
 </div>
@@ -390,13 +439,30 @@
   小樽から「生活を守る文化」を育てていくための社会的啓発として公開しています。
 </p>
 <div class="hero-notice hero-update">
-  <strong>更新情報（2026.10.16）</strong><br>
-  ・退院後地域包括ケア連携事業 を追加しました<br>
-  ・フレイル評価ツール を追加しました
-</div>
-  </div>
-</section>
+  <strong>更新履歴</strong>
 
+  <div class="update-history">
+
+    <div class="update-item">
+      <strong>2026.10.16</strong><br>
+      ・『退院後地域包括ケア連携事業』を公開しました<br>
+      ・『フレイル評価ツール』を公開しました
+    </div>
+
+    <div class="update-item">
+      <strong>2026.10.15</strong><br>
+      ・『かかりつけ医の役割』を公開しました
+    </div>
+
+    <div class="update-item">
+      <strong>2026.10.14</strong><br>
+      ・『サイトリニューアル』
+      ・『フレイルとは』を公開しました
+    </div>
+
+  </div>
+</div>
+</section>
 
 <section id="about" class="section">
   
