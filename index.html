@@ -201,7 +201,17 @@
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
     gap: 20px;
   }
-
+.new-badge{
+  display:inline-block;
+  margin-left:8px;
+  padding:2px 8px;
+  border-radius:20px;
+  background:#dc2626;
+  color:#fff;
+  font-size:0.7rem;
+  font-weight:700;
+  vertical-align:middle;
+}
   /* 資料カード */
   .resource-grid {
     display: grid;
@@ -238,15 +248,17 @@
     background: #0b3c6f;
     color: #fff;
     font-size: 0.85rem;
-  }
 .hero-notice{
   margin-top:24px;
   padding:14px 18px;
-  background:rgba(255,255,255,0.15);
+  background:#fff3cd;
+  border-left:6px solid #f59e0b;
   border-radius:10px;
-  font-size:0.85rem;
+  font-size:0.9rem;
   line-height:1.8;
+  color:#5b3b00;
 }
+
   /* ACPportal */
   .acp-link-panel {
     background: #e8f2ff;
@@ -354,7 +366,7 @@
     </nav>
         <!-- ★ ヘッダー右側に更新日 -->
     <div style="font-size:0.8rem; color:#dfe9f5;">
-  最終更新：2026.10.15
+  最終更新：2026.10.16
 </div>
   
   </div>
@@ -377,7 +389,11 @@
   資料の転載・改変・再配布は認めていません。<br>
   小樽から「生活を守る文化」を育てていくための社会的啓発として公開しています。
 </p>
-
+<div class="hero-notice hero-update">
+  <strong>更新情報（2026.10.16）</strong><br>
+  ・退院後地域包括ケア連携事業 を追加しました<br>
+  ・フレイル評価ツール を追加しました
+</div>
   </div>
 </section>
 
@@ -499,40 +515,70 @@
     現場でのカンファレンスや、多職種連携の場面での活用を想定しています。
   </p>
 
-  <div class="resource-grid">
-    <div class="resource-card">
-      <h3>小樽とACP</h3>
-      <p>小樽の医療構造の変化と、ACP文化の必要性を整理したスライド資料です。</p>
-      <a href="小樽とACP.html">開く</a>
-    </div>
+ <div class="resource-grid">
+
   <div class="resource-card">
-  <h3>急性期医療・救急医療を守るために</h3>
-  <p>急性期・救急医療が本来の役割を果たすために必要な地域構造と、ACP・Accountabilityの重要性を整理した提言です。</p>
-  <a href="急性期医療・救急医療を守るために.html">開く</a>
-</div>
-<div class="resource-card">
-  <h3>かかりつけ医の役割</h3>
-  <p>ACCCAに基づく、かかりつけ医の本質的役割を整理した資料です。</p>
-  <a href="Older.html">開く</a>
-</div>
+    <h3>退院後地域包括ケア連携事業
+      <span class="new-badge">NEW</span>
+    </h3>
+    <p>
+      入院を契機に顕在化した生活破綻リスクに対し、
+      退院直後から生活再建を支援する地域連携モデルです。
+    </p>
+   <a href="退院後地域包括ケア連携事業.html">開く</a>
+  </div>
 
-    <div class="resource-card">
-      <h3>医療者用 ACPシート</h3>
-      <p>医療的価値観や治療方針を、本人・家族と共有するためのシートです。</p>
-      <a href="医療者用.html">開く</a>
-    </div>
+  <div class="resource-card">
+    <h3>小樽とACP</h3>
+    <p>
+      小樽の医療構造の変化と、ACP文化の必要性を整理したスライド資料です。
+    </p>
+    <a href="小樽とACP.html">開く</a>
+  </div>
+  <div class="resource-card">
+    <h3>急性期医療・救急医療を守るために</h3>
+    <p>
+      急性期・救急医療が本来の役割を果たすために必要な地域構造と、
+      ACP・Accountabilityの重要性を整理した提言です。
+    </p>
+    <a href="急性期医療・救急医療を守るために.html">開く</a>
+  </div>
 
-    <div class="resource-card">
-      <h3>意思決定支援（倫理カンファ用）</h3>
-      <p>価値観が揺れる場面で、多職種で最善の方針を検討するための枠組みです。</p>
-      <a href="意思決定支援用.html">開く</a>
-    </div>
+  <div class="resource-card">
+    <h3>かかりつけ医の役割</h3>
+    <p>
+      ACCCAに基づく、かかりつけ医の本質的役割を整理した資料です。
+    </p>
+    <a href="Older.html">開く</a>
+  </div>
 
-    <div class="resource-card">
-      <h3>フレイル評価・介入ツール</h3>
-      <p>フレイルの評価や、介入内容を整理するためのツール群（準備中）。</p>
-      <a href="#">準備中</a>
-    </div>
+  <div class="resource-card">
+    <h3>医療者用ACPシート</h3>
+    <p>
+      医療的価値観や治療方針を、本人・家族と共有するためのシートです。
+    </p>
+    <a href="医療者用.html">開く</a>
+  </div>
+
+  <div class="resource-card">
+    <h3>意思決定支援（倫理カンファ用）</h3>
+    <p>
+      価値観が揺れる場面で、多職種で最善の方針を検討するための枠組みです。
+    </p>
+    <a href="意思決定支援用.html">開く</a>
+  </div>
+
+ <div class="resource-card">
+    <h3>フレイル評価ツール
+      <span class="new-badge">NEW</span>
+    </h3>
+    <p>
+      CGA7、CFS、CVI、JAGESなどを用いて、
+      フレイルや生活破綻のリスクを評価するためのツール集です。
+    </p>
+    <a href="フレイル評価ツール.html">開く</a>
+  </div>
+
   </div>
 </section>
 <section id="lectures" class="section">
