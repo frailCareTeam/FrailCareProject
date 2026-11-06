@@ -4,31 +4,127 @@
   <meta charset="UTF-8">
   <title>真の地域包括ケア｜講演資料</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
       background-color: #f4f7f9;
       margin: 0;
-      padding: 20px;
+      padding: 15px;
       color: #333;
+      line-height: 1.6;
     }
+
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
     }
+
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       color: #0b3c6f;
+      margin: 20px 0;
+      line-height: 1.4;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: #0b3c6f;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
       margin-bottom: 20px;
+    }
+
+    .back-button:hover {
+      background-color: #14589c;
+    }
+
+    .pdf-wrapper {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .pdf-viewer {
+      width: 100%;
+      height: 85vh;
+      border: none;
+    }
+
+    .message {
+      margin: 20px 0;
+      text-align: center;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .bottom-area {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      .back-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 1rem;
+      }
+
+      .pdf-viewer {
+        height: 75vh;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>真の地域包括ケア｜講演資料</h1>
 
-    <embed src="真の地域包括ケア.pdf" type="application/pdf" width="100%" height="900px">
+  <div class="container">
+
+    <a href="https://frailcareteam.github.io/FrailCareProject/" class="back-button">
+      ← フレイルケアプロジェクト TOPページへ
+    </a>
+
+    <h1>
+      真の地域包括ケア<br>
+      講演資料
+    </h1>
+
+    <div class="pdf-wrapper">
+      <embed
+        src="真の地域包括ケア.pdf"
+        type="application/pdf"
+        class="pdf-viewer">
+    </div>
+
+    <div class="message">
+      講演資料をご覧いただきありがとうございました。<br>
+      フレイルケアプロジェクトでは、予測し、備え、共有する社会づくりを目指し、医療・介護・予防の情報発信を行っています。
+    </div>
+
+    <div class="bottom-area">
+      <a href="https://frailcareteam.github.io/FrailCareProject/" class="back-button">
+        ▶ フレイルケアプロジェクトへ
+      </a>
+    </div>
+
   </div>
+
 </body>
 </html>
